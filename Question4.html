@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ques 4</title>
+  <script>
+    var i = 2;
+    var s = 0;
+    var size = 10;
+    var color = [
+      "red",
+      "blue",
+      "green",
+      "Yellow",
+      "Black",
+      " Pink",
+      "Orange",
+      "grey",
+    ];
+
+    function cal() {
+      if (s == 0) {
+        document.write(
+          '<h1 style="text-align: center;"><B><u>Question-4 CSC/20/1</u></B></h1>'
+        );
+        s = s + 1;
+      }
+      else {
+        size = size + 3;
+
+        document.write('<p style= "font-size: ' + size +"px; color:" + color[size % 10] + '">' +
+          i * 1 + " " +
+          i * 2 + " " +
+          i * 3 + " " +
+          i * 4 + " " +
+          i * 5 + " " +
+          i * 6 + " " +
+          i * 7 + " " +
+          i * 8 + " " +
+          i * 9 + " " +
+          i * 10 + "</p>"
+        );
+        i = i + 1;
+        if (i == 11) {
+          clearInterval(myInterval);
+        }
+      }
+    }
+    const myInterval = setInterval(cal, 1000);
+  </script>
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,85 @@
+<!-- Create an HTML page with a paragraph written on it and under which 9 buttons are placed in a 3X3 grid.The first row
+is for buttons labeled with colors namesRed, Green, and Blue,the secondrow with numbers 10, 20, 30, and the third row with
+different font names.Click event of eachof the buttons should make the appropriate change in the style of paragraph.
+Q5 Page 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ques 5</title>
+  <style media="screen">
+    td,
+    table,
+    tbody {
+      font-style: italic;
+      border: 1px solid black;
+    }
+    button {
+      width: 100%;
+      height: 30px;
+      border: 0px;
+    }
+    button:hover {
+      background-color: orange;
+      color: White;
+    }
+  </style>
+  <script type="text/javascript">
+    // <!-- Create an HTML page with a paragraph written on it and under which 9 buttons are placed in a 3X3 grid.The first row
+    // is for buttons labeled with colors namesRed, Green, and Blue,the secondrow with numbers 10, 20, 30, and the third row with
+    // different font names.Click event of eachof the buttons should make the appropriate change in the style of paragraph.
+    // Q5 Page 2 -->
+    function change(value) {
+      var pa = document.getElementById("PARAGRAPH");
+      if (value == 'RED') {
+        pa.style.backgroundColor = 'RED';
+      } else if (value == 'GREEN') {
+        pa.style.backgroundColor = 'GREEN';
+      } else if (value == 'BLUE') {
+        pa.style.backgroundColor = 'BLUE';
+      } else if (value == '10') {
+        pa.style.fontSize = '10px';
+      } else if (value == '20') {
+        pa.style.fontSize = '20px';
+      } else if (value == '30') {
+        pa.style.fontSize = '30px';
+      } else if (value == 'SEGOE') {
+        pa.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ";
+      } else if (value == 'BOLD') {
+        pa.style.fontWeight = 'BOLDER';
+      } else if (value == 'CURSIVE') {
+        pa.style.fontStyle = 'italic';
+      }
+    }
+  </script>
+</head>
+ <!-- Create an HTML page with a paragraph written on it and under which 9 buttons are placed in a 3X3 grid.The first row 
+// is for buttons labeled with colors namesRed, Green, and Blue,the secondrow with numbers 10, 20, 30, and the third row with
+// different font names.Click event of eachof the buttons should make the appropriate change in the style of paragraph.
+// Q5 Page 3 -->
+<body>
+  <p id="PARAGRAPH">Ronit CSC/20/1.</p>
+  <table>
+    <tbody>
+      <tr>
+        <td><button onclick="change(value)" value="RED">RED</button></td>
+        <td><button onclick="change(value)" value="GREEN">GREEN</button></td>
+        <td><button onclick="change(value)" value="BLUE">BLUE</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="change(value)" value="10">10</button></td>
+        <td><button onclick="change(value)" value="20">20</button></td>
+        <td><button onclick="change(value)" value="30">30</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="change(value)" value="SEGOE">SEGOEUI</button></td>
+        <td><button onclick="change(value)" value="BOLD">BOLD</button></td>
+        <td><button onclick="change(value)" value="CURSIVE">CURSIVE</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

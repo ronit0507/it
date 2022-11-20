@@ -1,0 +1,66 @@
+<!-- Ques-7. Store JSON data of few pets that you created in previous practical in a JSON file (copy from console output of previous program
+ to a .json file). Using AJAX, load data from the file and display it in a presentable way using HTML and CSS. -->
+<html lang="en"><!--  Q7 page 1 -->
+<head>
+  <meta charset="UTF-8">
+  <title>Ques7</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <style>
+    table {
+      margin: 0 100;
+      font-size: large;
+      border: 1px solid black;
+    }
+    h1 {
+      margin: 0 250px;
+      color: red;
+      font-size: xx-large;
+      font-family: 'Gill Sans','Gill Sans MT', ' Calibri', 'Trebuchet MS', 'sans-serif';
+    }
+    td {
+      background-color: #E4F5D4;
+      border: 1px solid black;
+    }
+    th,td {
+      font-weight: bold;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    td {
+      font-weight: lighter;
+    }
+  </style>
+</head>
+
+<body> <!-- Q7 page2 -->
+  <section>
+    <h1><u><b>PET DETAIL</b></u></h1><br>
+    <table id='table'>
+      <tr>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>WEIGHT</th>
+        <th>TYPE</th>
+        <th>LIKES</th>
+      </tr>
+      <script>
+        $(document).ready(function() {
+          $.getJSON("pet.json", function(data) {
+            var Pet = '';
+            $.each(data, function(key, value) {
+              Pet += '<tr>';
+              Pet += '<td>' + value.name + '</td>';
+              Pet += '<td>' + value.age + '</td>';
+              Pet += '<td>' + value.weight + '</td>';
+              Pet += '<td>' + value.type + '</td>';
+              Pet += '<td>' + value.like + '</td>';
+              Pet += '</tr>';
+            });
+            $('#table').append(Pet);
+          });
+        });
+      </script>
+  </section>
+</body>
+</html>
